@@ -1,4 +1,4 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Pizza } from '../pizza';
 
 @Component({
@@ -8,13 +8,14 @@ import { Pizza } from '../pizza';
 })
 export class PizzaComponent implements OnInit {
 
-@Input() pizza:Pizza
-/*pizza : Pizza = {name: "marguarita", price: 12, url: "http://delivery-pizza.fr/images/livraison-pizza-maubeuge.jpg"};*/
-
+  @Input() pizza : Pizza
   constructor() { }
 
   ngOnInit() {
   }
 
+  /*modifyPizza(){
+      this.pizza.name = "4 fromages";
+  }*/
 
 }

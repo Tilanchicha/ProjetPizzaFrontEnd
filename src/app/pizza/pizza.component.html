@@ -1,12 +1,15 @@
 <div class="row shadow-lg p-3 mx-4 mb-5 bg-white rounded">
-
-  <div class ="col-8">
-<h2>{{pizza.name| titlecase}} </h2>
-<p>{{pizza.price}}€</p>
+  <div class="col-8">
+    <h2>{{pizza.name | titlecase}}</h2>
+    <p>{{pizza.price}} €</p>
+    <a class="btn btn-info" routerLink="/pizza/{{pizza.id}}">
+      Details
+    </a>
   </div>
 
   <div class="col">
-    <img [src]="pizza.url">
+      <img [src]="pizza.url">
   </div>
-
 </div>
+
+<!--<button (click)="modifyPizza()">Modifier</button>-->

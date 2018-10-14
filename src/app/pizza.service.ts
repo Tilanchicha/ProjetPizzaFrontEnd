@@ -1,22 +1,25 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+
 import { Observable } from 'rxjs';
 import { Pizza } from './pizza';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PizzaService {
-  listPizza(): any {
-    throw new Error("Method not implemented.");
+  
+  URL = "https://lpa2sgadot.herokuapp.com";
+
+  constructor(private httpClient: HttpClient) { 
+     
   }
 
-  URL = "https://lpa2sgadot.herokuapp.com"
-
-  constructor(private httpclient: HttpClient) { }
-
-  listePizza():Observable<Pizza[]>{
-    return this.httpclient.get<Pizza[]>(this.URL + '/pizza.json')
+  listPizzas():Observable<Pizza[]>{
+    return this.httpClient.get<Pizza[]>(this.URL + '/pizzas.json');
   }
 
+  PizzaByID(idPizza: number): Observable<Pizza> {
+    return this.httpClient.get<Pizza>(this.URL + '/pizzas/' + idPizza + '.json');
+}
 }
