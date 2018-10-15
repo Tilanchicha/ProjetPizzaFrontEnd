@@ -19,7 +19,7 @@ export class PizzaDetailsComponent implements OnInit {
 
   getPizza(){
       const id = +this.activateRoute.snapshot.paramMap.get('id');
-      this.pizzaService.PizzaByID(id)
+      this.pizzaService.GetPizzaBYID(id)
           .subscribe(pizza => this.pizza = pizza);
     }
 }
