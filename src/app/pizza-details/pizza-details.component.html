@@ -1,7 +1,8 @@
 <div class="card" >
   <div class="card-body">
     <h5 class="card-title"> {{pizza?.name}}</h5>
-    <img class="card-img-top" [src]="pizza?.url" alt="Card image cap">
+    <img [src]="pizza?.url" alt="Card image cap">
+    <ngx-paypal [config]="payPalConfig"></ngx-paypal>
       <P> {{pizza?.price}} €</P>
   </div>
 </div>

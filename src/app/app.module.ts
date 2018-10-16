@@ -7,6 +7,9 @@ import { PizzaListComponent } from './pizza-list/pizza-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PizzaDetailsComponent } from './pizza-details/pizza-details.component';
 import { AppRoutingModule } from './app-routing.module';
+import { NgxPayPalModule } from 'ngx-paypal';
+import {ApiModule} from './REST';
+
 
 @NgModule({
   declarations: [
@@ -18,9 +21,12 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    NgxPayPalModule,
+    AppRoutingModule,
+    ApiModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

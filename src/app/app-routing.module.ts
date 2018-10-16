@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {PizzaDetailsComponent} from './pizza-details/pizza-details.component';
 import {PizzaListComponent} from './pizza-list/pizza-list.component';
 
+
 const routes: Routes = [
   {path: '', redirectTo: '/pizza', pathMatch: 'full'},
   {path: 'pizza', component: PizzaListComponent},
@@ -15,3 +16,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
