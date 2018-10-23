@@ -28,9 +28,5 @@ exports.handler = function(event, context, callback) {
        requestCert: true,
        agent: false
     };
-       console.log(JSON.stringify(JSON.parse(body), null, 2))
-
-
-       console.log(JSON.stringify(querystring.parse(body), null, 2))
 
   }
