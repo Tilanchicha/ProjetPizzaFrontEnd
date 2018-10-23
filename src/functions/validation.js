@@ -20,7 +20,7 @@ exports.handler = (event, context, callback) => {
     console.log(body);
 
     var options = {
-        url: 'https://www.sandbox.paypal.com/cgi-bin/webscr',
+        url: 'https://ipnpb.sandbox.paypal.com/cgi-bin/webscr',
         method: 'POST',
         headers: {
             'Connection': 'close'
