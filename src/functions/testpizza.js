@@ -5,7 +5,7 @@ exports.handler = function(event, context, callback) {
 
   callback(null, {
   statusCode: 200,
-  body: "Hello, World ca marche"
+  body: "commande crée"
   });
 
    //Read the IPN message sent from PayPal and prepend 'cmd=_notify-validate'
